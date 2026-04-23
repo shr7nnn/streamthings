@@ -5,49 +5,46 @@ StreamThings is a Stream Deck plugin for controlling Samsung SmartThings scenes,
 - The plugin is designed around OAuth which is permanent, not like PAT which is 24-hour personal access tokens
 
 # Instructions
-Each user needs their own SmartThings OAuth app credentials.
-You will need:
-- a `Client ID`
-- a `Client Secret`
 
 ## 1. Install the SmartThings CLI
-https://github.com/SmartThingsCommunity/smartthings-cli
-
+You will need this to create:
+- a `Client ID`
+- a `Client Secret`
+  
 Installation
-Homebrew (MacOS)
-brew install smartthingscommunity/smartthings/smartthings
+> Homebrew (MacOS)
+  brew install smartthingscommunity/smartthings/smartthings
+> Windows
+  Download and run the smartthings.msi installer from the latest Release.
+  https://github.com/SmartThingsCommunity/smartthings-cli
 
-Windows
-Download and run the smartthings.msi installer from the latest Release.
-
-3. Run in Terminal/Command Prompt:
+## Run in Terminal/Command Prompt:
 ```bash
 smartthings login
 ```
 
-3. Create an app:
+## Create an app:
 ```bash
 smartthings apps:create
 ```
 
-4. When prompted, use:
+## When prompted, use:
 - App type: `OAuth-In App`
 - Name: `StreamThings`
 - Description: `Stream Deck SmartThings control`
 - Target URL: leave blank if allowed
 - Redirect URI: `https://shr7nnn.github.io/callbackstreamdeck/`
 
-5. Select these scopes:
+## Select these scopes:
 - `r:devices:*`
 - `x:devices:*`
 - `r:scenes:*`
 - `x:scenes:*`
 
-6. Copy the generated `clientId` and `clientSecret`
+## Copy the generated `clientId` and `clientSecret`
 
 
 ## Install the Plugin & Configure
-
 1. Add any StreamThings action to a key
 2. In the property inspector, enter:
 - `Client ID`
