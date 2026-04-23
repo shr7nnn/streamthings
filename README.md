@@ -78,4 +78,4 @@ When connection succeeds:
 - the plugin stores the OAuth tokens locally
 - access tokens refresh automatically when needed
 
-## Made with love by shr7n
+## Made with love by shr7n <3
